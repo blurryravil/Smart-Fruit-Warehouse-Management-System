@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Smart Fruit Warehouse</title>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+<link href="https://fonts.googleapis.com/css?family=Raleway" rel="stylesheet" type="text/css">
+<style>
+body {font-family: "Raleway", Arial, sans-serif}
+.w3-row img {margin-bottom: -8px}
+</style>
+</head>
+<body>
+
+<!-- !PAGE CONTENT! -->
+<div class="w3-content" style="max-width:1500px">
+
+  <!-- Header -->
+  <header class="w3-container w3-xlarge w3-padding-24">
+    <a href="#" class="w3-left w3-button w3-white">Smart Fruit Warehouse Management System</a>
+    <a href="#about" class="w3-right w3-button w3-white">About</a>
+  </header>
+  
+<!-- End Page Content -->
+</div>
+
+<!-- Footer / About Section -->
+<footer class="w3-light-grey w3-padding-64 w3-center" id="about">
+  <h2>About</h2>
+  
+  <p>
+    We live in an era where technology and automation are impacting every domain possible, increasing efficiency, productivity, and scalability and at the same time cutting down investments and efforts.The objective of this study is to introduce an electronic nose for classifying the ripening stages of the various fruits and measuring the time for their quality to degrade based on the character of the fruit aroma. This will ultimately help the farmers to determine an estimated time left for the fruit to be sold or consumed so that he/she can make a better decision and increase their profit. The proposed system succeeded in distinguishing the time left for ripeness of bananas including unripe, ripe, and overripe stages with performance evaluation values of nearly 90%.</p>
+  <iframe width="450" height="260" style="border: 3px solid white;" src="https://thingspeak.com/channels/1784550/charts/1?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=50&type=line"></iframe>
+  <iframe width="450" height="260" style="border: 3px solid #cccccc;" src="https://thingspeak.com/channels/1784550/charts/2?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+  <iframe width="450" height="260" style="border: 3px solid #cccccc;" src="https://thingspeak.com/channels/1784550/charts/3?bgcolor=%23ffffff&color=%23d62020&dynamic=true&results=60&type=line&update=15"></iframe>
+  <center><h4>{{ prediction_text }}</h4></center>
+<form action="{{ url_for('predict')}}" method="POST">
+  <button type="submit" class="btn btn-primary btn-block btn-large">Check</button>
+</form>
+
+  
+</footer>
+ 
+</body>
+</html>
